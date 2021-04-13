@@ -1,0 +1,7 @@
+Module	Section	Sample Name	Source
+Samtools	flagstat	Evaluation.Rmd	/shared/ifbstor1/home/gcastel/M4M5/EvaluationM4M5/Evaluation.Rmd
+Samtools	flagstat	OUTPUT | count_reads-15756166	/shared/ifbstor1/home/gcastel/M4M5/EvaluationM4M5/OUTPUT/count_reads-15756166.out
+Samtools	flagstat	ipynb_checkpoints | Evaluation-checkpoint.Rmd	/shared/ifbstor1/home/gcastel/M4M5/EvaluationM4M5/.ipynb_checkpoints/Evaluation-checkpoint.Rmd
+fastp	all_sections	CLEANING | fastp	/shared/ifbstor1/home/gcastel/M4M5/EvaluationM4M5/CLEANING/fastp.json
+FastQC	all_sections	QC | SRR10390685_2	/shared/ifbstor1/home/gcastel/M4M5/EvaluationM4M5/QC/SRR10390685_2_fastqc.zip
+FastQC	all_sections	QC | SRR10390685_1	/shared/ifbstor1/home/gcastel/M4M5/EvaluationM4M5/QC/SRR10390685_1_fastqc.zip
