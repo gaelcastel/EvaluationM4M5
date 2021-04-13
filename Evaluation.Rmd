@@ -233,7 +233,7 @@ On note aussi la détection d'une séquence de 35 nucléotides non identifiés (
 
 On retrouve également une séquence de 50 'G' sur-représentée dans les reads 2 (0.11%), mais celle-ci peut correspondre à des régions répétées du génome bactérien.
 
-Lien vers le [rapport MultiQC](https://github.com/gaelcastel/EvaluationM4M5/tree/master/QC)
+Lien vers le [rapport FastQC r1](https://github.com/gaelcastel/EvaluationM4M5/tree/master/QC/SRR10390685_1_fastqc.html) et [rapport FastQC r2](https://github.com/gaelcastel/EvaluationM4M5/tree/master/QC/SRR10390685_2_fastqc.html)
 
 Est-ce que les reads déposés ont subi une étape de nettoyage avant d'être déposés ? Pourquoi ?
 
@@ -461,7 +461,7 @@ Combien de reads ne sont pas mappés ?
 ```
 
 
-<code>761208</code> reads (13847147 total-13085939 mapped) ne sont pas mappés, soit environ 5.50% des reads.
+<code>719330</code> reads (13847147 total -13085939 mapped -41878 singletons) ne sont pas mappés, soit environ 5.2% des reads. Il faut noter que certains reads ont été mappés mais pas leur paired read, c'est ce qu'on appelle des singletons. Par conséquent, le nombre de reads pairés mappés est de 13085939 (=mapped), soit environ 94.50%.
 
 ## Croisement de données
 
@@ -560,6 +560,24 @@ Utilisez <strong class="tool">IGV</strong> @igv sous [sa version en ligne](https
 ````
 <img src="./images/igv.png" alt="IGV visualisation of trmNF overlapping reads">
 
-# References
+## MultiQC
 
-# FAIRE LE MULTIQC post-alignement
+Le rapport MultiQC, qui récapitule la majorité des points que nous avons abordés, est consultable ici : [rapport MultiQC](https://github.com/gaelcastel/EvaluationM4M5/tree/master/QC/multiqc_report.html)
+
+````{bash multiqc}
+#sbatch SCRIPTS/multiqc_script.sh
+#
+#cat SCRIPTS/multiqc_script.sh 
+#  #!/bin/bash
+#  
+#  #SBATCH --mem=40G
+#  #SBATCH --output=OUTPUT/multiqc-%j.out
+#  #SBATCH --error=LOG/multiqc-%j.err
+#  
+#  module load multiqc
+#  srun multiqc -d . -o QC""
+
+````
+
+
+# References
