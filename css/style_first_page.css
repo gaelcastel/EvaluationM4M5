@@ -46,6 +46,37 @@ table > thead > tr > th {
 }
 /* End of table styles */
 
+h1, h2, h3, h4{
+  color:#4e8f93;
+}
+
+.tool{
+    background-color: #8eadac;
+    color: white;
+    padding: 1px 1px 3px 6px;
+    border-radius: 8px;
+}
+
+
+
+.base-grid, distill-header, d-title, d-abstract, d-article, d-appendix, distill-appendix, d-byline, d-footnote-list, d-citation-list, distill-footer {
+    grid-column-gap: 90px !important;
+}
+
+h1:not(.title) {
+    font-size:30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 1rem;
+    border-color:#4e8f93;
+    margin-top: 25px;
+}
+
+h2 {
+    font-size:23px;
+    border-bottom: none;
+    margin-top: 25px;
+    
+}
 
 a {
   color:#fd8e4d;
