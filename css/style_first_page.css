@@ -97,10 +97,14 @@ code:not(.hljs) {
   color: blue !important;
 }
 
-div img {
-    float: left;
-    margin-right: 10px;
+.image { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
 }
-div p {
-    overflow: auto;
+
+h2 { 
+   position: absolute; 
+   top: 200px; 
+   left: 0; 
+   width: 100%; 
 }
