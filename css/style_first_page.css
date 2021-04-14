@@ -1,9 +1,4 @@
 
-
-code:not(.hljs) {
-  color: blue !important;
-}
-
 div img {
     float: left;
     margin-right: 10px;
