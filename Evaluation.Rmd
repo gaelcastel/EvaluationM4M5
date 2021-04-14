@@ -322,9 +322,9 @@ Les paramètres suivants ont été choisis :
 
 
 |                  Parametre                  | Valeur |                              Explication                          |
-|---------------------------------------------|:------:|------------------------------------------------------------------:|
+|:-------------------------------------------:|:------:|:-----------------------------------------------------------------:|
 | --length_required                           |   36   |La section "Overrepresented sequences" du fastqc des reads 1<br>indique une séquence surreprésentée de 35 nucléotides non<br>identifiés "N". Comme les reads font majoritairement autour<br>de 150 bp, on va éliminer tous les reads dont la longueur est<br>inférieure à 36 bp pour éliminer ces séquences de 35 "N",<br> sans risquer d'éliminer des reads d'intérêt.|
-| --cut_tail                                  |   NA   | <br>Le programme va lire les reads depuis l'extrémité 3' pour dé-<br>terminer s'ils seront conservés ou éliminés selon les<br>critères de qualité définis par nous (cf ci-dessous).|
+| --cut_tail                                  |   NA   |Le programme va lire les reads depuis l'extrémité 3' pour dé-<br>terminer s'ils seront conservés ou éliminés selon les<br>critères de qualité définis par nous (cf ci-dessous).|
 | --cut_window_size                           |    8   |Le programme va lire les reads par morceaux de 8 bp.| 
 | --cut_mean_quality                          |   28   |La section "Per sequence quality scores" du fastqc montre que<br>le très grande majorité des séquences ont un score > 28. On<br>va donc éliminer celles dont le score est < 28, en<br>considérant qu'ils sont de qualité médiocre, et qu'ils ne<br>représentent qu'une part négligeable des reads totaux. Ce<br>paramètre est utilisé en coopération avec --cut_tail et<br>--cut_window_size 8. Ainsi, le programme va parcourir le read<br>depuis l'extrémité 3' (--cut_tail) par fenêtre de 8 bp<br>(--cut_window_size 8) en les éliminant si leur score de<br>qualité moyen est < 28.| 
 
