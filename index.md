@@ -9,4 +9,4 @@ Le projet est consultable sur mon dépôt Github, sous le nom de projet : [Evalu
 Les réponses de l'évaluation sont consignées dans ce [rapport HTML](https://gaelcastel.github.io/EvaluationM4M5/Evaluation.html).
 En lisant ce rapport, vous trouverez les résultats d'une analyse des données de reséquençage du génome de Bacillus subtilis. Ces résultats sont consignés dans ce rapport [MultiQC](https://gaelcastel.github.io/EvaluationM4M5/QC/multiqc_report.html) 
 
-![bg]("./images/bacillus_subtilis.jpg")
+![bg](./images/bacillus_subtilis.jpg)
