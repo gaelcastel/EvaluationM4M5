@@ -5,7 +5,7 @@ title: BackChat.io Project Documentation
 Gaël Castel Evaluation des modules 4 et 5
 =========================
  <div class="container">
-  <img src="images/bacillus_subtilis.jpg" alt="Bactos" style="width:100%;opacity:0.4;filter:alpha(opacity=40);">
+  <img src="images/bacillus_subtilis.jpg" alt="Bactos" style="background-image: url('img_girl.jpg');width:100%;opacity:0.4;filter:alpha(opacity=40);">
   <div class="centered">Le projet est consultable sur mon dépôt Github, sous le nom de projet : 
 <a href="https://github.com/gaelcastel/EvaluationM4M5">EvaluationM4M5</a>
 Les réponses de l'évaluation sont consignées dans ce <a href="https://gaelcastel.github.io/EvaluationM4M5/Evaluation.html">rapport HTML</a>
