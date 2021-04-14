@@ -1,3 +1,70 @@
+/* Table styles ripped from Github */
+table {
+    display: block;
+    overflow: auto;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+table tr {
+    background-color: #fff;
+    border-top: 1px solid #c6cbd1;
+}
+
+table tr:nth-child(2n) {
+    background-color: #f6f8fa;
+}
+
+table th {
+    font-weight: 600;
+}
+
+table td,
+table th {
+    border: 1px solid #dfe2e5;
+    padding: 6px 13px;
+}
+
+table tr {
+    background-color: #fff;
+    border-top: 1px solid #c6cbd1;
+}
+
+table tr:nth-child(2n) {
+    background-color: #f6f8fa;
+}
+
+table > thead > tr > th {
+    border-bottom: 0;
+}
+/* End of table styles */
+
+h1, h2, h3, h4{
+  color:#4e8f93;
+}
+
+.tool{
+    background-color: #8eadac;
+    color: white;
+    padding: 1px 1px 3px 6px;
+    border-radius: 8px;
+}
+
+.tool:after {    
+    font-family: "Font Awesome 5 Free";  /* updated font-family */
+    font-weight: 900;
+    content: '\f0Ad';
+    margin:0 5px 0 5px;
+    color: white;
+}
+
 
 h1:not(.title) {
     font-size:30px;
