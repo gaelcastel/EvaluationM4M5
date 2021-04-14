@@ -50,7 +50,12 @@ h1, h2, h3, h4{
   color:#4e8f93;
 }
 
-
+.tool{
+    background-color: #8eadac;
+    color: white;
+    padding: 1px 1px 3px 6px;
+    border-radius: 8px;
+}
 
 .tool:after {    
     font-family: "Font Awesome 5 Free";  /* updated font-family */
@@ -102,4 +107,8 @@ h2 {
    top: 200px; 
    left: 0; 
    width: 100%; 
+}
+
+body {
+  background-image: url("images/bacillus_subtilis.jpg");
 }
