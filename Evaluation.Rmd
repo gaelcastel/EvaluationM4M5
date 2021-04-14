@@ -540,7 +540,7 @@ Utilisez <strong class="tool">IGV</strong> @igv sous [sa version en ligne](https
 #En zoomant au maximum, on observe les reads qui chevauchent trmNF à la position attendue entre 42.75 kb et 43.75 kb.
 
 ````
-<img src="./images/igv.png" alt="IGV visualisation of trmNF overlapping reads">
+On peut visualiser les reads qui chevauchent trmNF sur le génome ![ici](./images/igv.png "IGV visualisation of trmNF overlapping reads")
 
 ## MultiQC
 
