@@ -4,9 +4,13 @@ title: BackChat.io Project Documentation
 ---
 Gaël Castel Evaluation des modules 4 et 5
 =========================
+<div class="image">
 
-Le projet est consultable sur mon dépôt Github, sous le nom de projet : [EvaluationM4M5](https://github.com/gaelcastel/EvaluationM4M5).
+      <img class="bg" src="./images/bacillus_subtilis.jpg" style="opacity:0.5; filter:alpha(opacity=30)" alt=""/>
+      
+      <h2>Le projet est consultable sur mon dépôt Github, sous le nom de projet : [EvaluationM4M5](https://github.com/gaelcastel/EvaluationM4M5).
 Les réponses de l'évaluation sont consignées dans ce [rapport HTML](https://gaelcastel.github.io/EvaluationM4M5/Evaluation.html).
-En lisant ce rapport, vous trouverez les résultats d'une analyse des données de reséquençage du génome de Bacillus subtilis. Ces résultats sont consignés dans ce rapport [MultiQC](https://gaelcastel.github.io/EvaluationM4M5/QC/multiqc_report.html) 
+En lisant ce rapport, vous trouverez les résultats d'une analyse des données de reséquençage du génome de Bacillus subtilis. Ces résultats sont consignés dans ce rapport [MultiQC](https://gaelcastel.github.io/EvaluationM4M5/QC/multiqc_report.html)</h2>
 
-![bg](./images/bacillus_subtilis.jpg)
+</div>
+
