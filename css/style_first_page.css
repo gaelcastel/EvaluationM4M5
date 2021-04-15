@@ -1,3 +1,52 @@
+.hero {
+  position: relative; 
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.hero::before {    
+  content: "";
+  background-image: url("https://gaelcastel.github.io/EvaluationM4M5/images/bacillus_subtilis.jpg");
+  width: 100%;
+  opacity:0.7;
+  height: 100vh;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.hero a {
+  color:#9e0000;
+}
+
+h1{
+  color:#08ba0d;
+  z-index: 50;
+  position: relative;
+  font-family: 'Sarabun';
+  font-size: 36px;
+  text-align: center;
+  text-shadow: 2px 2px 2px #000000;
+}
+
+h2, h3, h4{
+  color:#000000;
+  z-index: 50;
+  position: relative;
+  left:20px;
+  top: 100px;
+  font-family: 'Sarabun';
+  font-size: 24px;
+  text-align: justify;
+  text-shadow: 0px 1px 0px #5c5c5c;
+}
+
 /* Table styles ripped from Github */
 table {
     display: block;
@@ -45,70 +94,3 @@ table > thead > tr > th {
     border-bottom: 0;
 }
 /* End of table styles */
-
-h1, h2, h3, h4{
-  color:#4e8f93;
-}
-
-.tool{
-    background-color: #8eadac;
-    color: white;
-    padding: 1px 1px 3px 6px;
-    border-radius: 8px;
-}
-
-.tool:after {    
-    font-family: "Font Awesome 5 Free";  /* updated font-family */
-    font-weight: 900;
-    content: '\f0Ad';
-    margin:0 5px 0 5px;
-    color: white;
-}
-
-.base-grid, distill-header, d-title, d-abstract, d-article, d-appendix, distill-appendix, d-byline, d-footnote-list, d-citation-list, distill-footer {
-    grid-column-gap: 90px !important;
-}
-
-h1:not(.title) {
-    font-size:30px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding-bottom: 1rem;
-    border-color:#4e8f93;
-    margin-top: 25px;
-}
-
-h2 {
-    font-size:23px;
-    border-bottom: none;
-    margin-top: 25px;
-    
-}
-
-a {
-  color:#fd8e4d;
-}
-
-.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
-  background-color: #4e8f93 !important;
-  border-color: #4e8f93 !important;
-}
-
-code:not(.hljs) {
-  color: blue !important;
-}
-
-.image { 
-   position: relative; 
-   width: 100%; /* for IE 6 */
-}
-
-h2 { 
-   position: absolute; 
-   top: 200px; 
-   left: 0; 
-   width: 100%; 
-}
-
-body {
-  background-image: url("images/bacillus_subtilis.jpg");
-}
