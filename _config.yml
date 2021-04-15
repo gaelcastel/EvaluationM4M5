@@ -1,1 +1,98 @@
 theme: jekyll-theme-cayman
+
+.hero {
+  position: relative; 
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.hero::before {    
+  content: "";
+  background-image: url("https://gaelcastel.github.io/EvaluationM4M5/images/bacillus_subtilis.jpg");
+  width: 100%;
+  opacity:0.7;
+  height: 100vh;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.hero a {
+  color:#9e0000;
+}
+
+h1{
+  color:#08ba0d;
+  z-index: 50;
+  position: relative;
+  font-family: 'Sarabun';
+  font-size: 36px;
+  text-align: center;
+  text-shadow: 2px 2px 2px #000000;
+}
+
+h2, h3, h4{
+  color:#000000;
+  z-index: 50;
+  position: relative;
+  left:20px;
+  top: 100px;
+  font-family: 'Sarabun';
+  font-size: 24px;
+  text-align: justify;
+  text-shadow: 0px 1px 0px #5c5c5c;
+}
+
+/* Table styles ripped from Github */
+table {
+    display: block;
+    overflow: auto;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+table tr {
+    background-color: #fff;
+    border-top: 1px solid #c6cbd1;
+}
+
+table tr:nth-child(2n) {
+    background-color: #f6f8fa;
+}
+
+table th {
+    font-weight: 600;
+}
+
+table td,
+table th {
+    border: 1px solid #dfe2e5;
+    padding: 6px 13px;
+}
+
+table tr {
+    background-color: #fff;
+    border-top: 1px solid #c6cbd1;
+}
+
+table tr:nth-child(2n) {
+    background-color: #f6f8fa;
+}
+
+table > thead > tr > th {
+    border-bottom: 0;
+}
+/* End of table styles */
