@@ -153,6 +153,29 @@ a:hover { text-decoration: underline; }
 @media screen and (min-width: 42em) and (max-width: 64em) { .project-tagline { font-size: 1.15rem; } }
 @media screen and (max-width: 42em) { .project-tagline { font-size: 1rem; } }
 
+.main-content {
+  word-wrap: break-word;
+  position: relative; 
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center }
+  
+.main-content::before {    
+  content: "";
+  background-image: url("https://gaelcastel.github.io/EvaluationM4M5/images/bacillus_subtilis.jpg");
+  width: 100%;
+  opacity:0.7;
+  height: 100vh;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
 .main-content { word-wrap: break-word; }
 .main-content :first-child { margin-top: 0; }
 @media screen and (min-width: 64em) { .main-content { max-width: 100%; padding: 2rem 6rem; margin: 0 auto; font-size: 1.1rem; } }
