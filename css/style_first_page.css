@@ -126,6 +126,12 @@
 
 * { box-sizing: border-box; }
 
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
 body { padding: 0; margin: 0; font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5; color: #606c71; }
 
 a { color: #1e6bb8; text-decoration: none; }
@@ -153,9 +159,6 @@ a:hover { text-decoration: underline; }
 @media screen and (min-width: 42em) and (max-width: 64em) { .project-tagline { font-size: 1.15rem; } }
 @media screen and (max-width: 42em) { .project-tagline { font-size: 1rem; } }
 
-.main-content, .toc {
-    max-width: 80rem;
-}
 .main-content { word-wrap: break-word; }
 .main-content :first-child { margin-top: 0; }
 @media screen and (min-width: 64em) { .main-content { max-width: 64rem; padding: 2rem 6rem; margin: 0 auto; font-size: 1.1rem; } }
