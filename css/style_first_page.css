@@ -209,7 +209,6 @@ a:hover { text-decoration: underline; }
    background-color: #f3f6fa;
    background-clip: content-box, padding-box;
    text-align: center;
-   margin: 20px;
 }
 
 @media screen and (min-width: 64em) { .site-footer { font-size: 1rem; } }
