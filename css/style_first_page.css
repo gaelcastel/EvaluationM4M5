@@ -207,7 +207,6 @@ a:hover { text-decoration: underline; }
    border-top: solid 1px #eff0f1;
    padding: 75px;
    background-image: linear-gradient(120deg, #f3f6fa, #f3f6fa);
-   background-clip: content-box, padding-box;
    text-align: center;
 }
 
