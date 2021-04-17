@@ -217,11 +217,11 @@ lorsque la différence entre A et T ou entre G et C est supérieure à 10% pour 
 
 Par ailleurs, on observe une <code>sur-représentation des bases AT (28% chacune)</code> par rapport aux GC (22% chacune). Mais après recherche sur [NCBI](https://www.ncbi.nlm.nih.gov/genome/?term=Bacillus%20subtilis%5BOrganism%5D&cmd=DetailsSearch), il s'avère que <code>c'est normal</code>, car le taux médian de <code>GC</code> du génome est de <code>43.6%</code> (~2*22%).
 
-Malgré le warning, la très grande <code>majorité des reads</code> ont la même longueur : <code>151 bp</code>, ce qui correspond à la longueur de séquençage des reads demandée.
+Malgré le warning, la très grande <code>majorité des reads</code> ont environ la même longueur : <code>150 bp</code>, ce qui correspond à la longueur de séquençage des reads demandée.
 
 Un warning alerte sur le niveau de duplication des reads, mais il reste acceptable étant donné qu'il s'agit de séquences génomiques qui peuvent contenir des duplications naturelles (superfamilles de gènes, insertion de séquences virales, quelques transposons...)
 
-On note aussi la détection d'une séquence de 35 nucléotides non identifiés ('N') qui est sur-représentée (0.13%) dans les reads 1. On voit d'ailleurs que sa taille correspond aux plus petits reads détectés, on peut penser qu'il s'agit d'un contaminant, ou duplex de primers ... ?
+On note aussi la détection d'une séquence de 35 nucléotides non identifiés ('N') qui est sur-représentée (0.13%) dans les reads 1. On voit d'ailleurs que sa taille correspond aux plus petits reads détectés, on peut penser qu'il s'agit d'un contaminant, ou de duplex de primers ... ?
 
 ````{bash}
 #cat RESULTS/nb_reads_res 
@@ -264,8 +264,6 @@ La profondeur de séquençage est de : <code>502</code> X.
 ## Nettoyage des reads
 
 Vous voulez maintenant nettoyer un peu vos lectures. Choisissez les paramètres de <strong class="tool">fastp</strong> @fastp qui vous semblent adéquats et justifiez-les.
-
-NB : je vais réessayer en trimmant les extrémités des reads car elles leur score de qualité est faible.
 
 ```{bash}
 #sbatch SCRIPTS/reads_cleaning_script.sh
@@ -326,7 +324,7 @@ Les paramètres suivants ont été choisis :
 | --length_required                           |   36   |La section "Overrepresented sequences" du fastqc des reads 1<br>indique une séquence surreprésentée de 35 nucléotides non<br>identifiés "N". Comme les reads font majoritairement autour<br>de 150 bp, on va éliminer tous les reads dont la longueur est<br>inférieure à 36 bp pour éliminer ces séquences de 35 "N",<br> sans risquer d'éliminer des reads d'intérêt.|
 | --cut_tail                                  |   NA   |Le programme va lire les reads depuis l'extrémité 3' pour dé-<br>terminer s'ils seront conservés ou éliminés selon les<br>critères de qualité définis par nous (cf ci-dessous).|
 | --cut_window_size                           |    8   |Le programme va lire les reads par morceaux de 8 bp.| 
-| --cut_mean_quality                          |   28   |La section "Per sequence quality scores" du fastqc montre que<br>le très grande majorité des séquences ont un score > 28. On<br>va donc éliminer celles dont le score est < 28, en<br>considérant qu'ils sont de qualité médiocre, et qu'ils ne<br>représentent qu'une part négligeable des reads totaux. Ce<br>paramètre est utilisé en coopération avec --cut_tail et<br>--cut_window_size 8. Ainsi, le programme va parcourir le read<br>depuis l'extrémité 3' (--cut_tail) par fenêtre de 8 bp<br>(--cut_window_size 8) en les éliminant si leur score de<br>qualité moyen est < 28.| 
+| --cut_mean_quality                          |   28   |La section "Per sequence quality scores" du fastqc montre que<br>le très grande majorité des séquences ont un score > 28. On<br>va donc éliminer celles dont le score est < 28, en<br>considérant qu'elles sont de qualité médiocre, et qu'elles ne<br>représentent qu'une part négligeable des reads totaux. Ce<br>paramètre est utilisé en coopération avec --cut_tail et<br>--cut_window_size 8. Ainsi, le programme va parcourir le read<br>depuis l'extrémité 3' (--cut_tail) par fenêtre de 8 bp<br>(--cut_window_size 8) en les éliminant si leur score de<br>qualité moyen est < 28.| 
 
 
 De plus, fastp va automatiquement détecter les adaptateurs et les éliminer des reads (il va les "trim"). Pour que le programme s'exécute plus rapidement, on le fait tourner sur 8 coeurs (--thread 8). Pour la sortie des rapports, on spécifie
@@ -482,7 +480,7 @@ Calculez le nombre de reads qui chevauchent avec au moins 50% de leur longueur l
 
 #cut -f1,2 REF_GENOME/ref_genome.fna.fai > REF_GENOME/my_genome
 
-#On détermine ensuite les reads qui chevauchent le gène trmNF sur au moins 50% de leur longueur.
+#On détermine ensuite les reads qui chevauchent le gène trmNF sur au moins 50% de leur longueur (paramètre -f 0.50).
 
 #sbatch SCRIPTS/trmNF_instersect_sequence_script.sh
 
@@ -544,8 +542,6 @@ On peut visualiser les reads qui chevauchent trmNF sur le génome ![ici](./image
 
 ## MultiQC
 
-Le rapport MultiQC, qui récapitule la majorité des points que nous avons abordés, est consultable ici : [rapport MultiQC](https://gaelcastel.github.io/EvaluationM4M5/QC/multiqc_report.html)
-
 ````{bash multiqc}
 #sbatch SCRIPTS/multiqc_script.sh
 #
@@ -561,5 +557,6 @@ Le rapport MultiQC, qui récapitule la majorité des points que nous avons abord
 
 ````
 
+Le rapport MultiQC, qui récapitule la majorité des points que nous avons abordés, est consultable ici : [rapport MultiQC](https://gaelcastel.github.io/EvaluationM4M5/QC/multiqc_report.html)
 
 # References
